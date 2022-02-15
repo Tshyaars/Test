@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.bcch{
+    background-color: rgb(172, 58, 143);
+}
+header{
+    min-width: 300px;
+}
+label>span{
+    display: block;
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+    width: 30px;
+    margin: 4px auto;
+}
+nav label{
+    padding: 4px;
+    display: block;
+}
+nav input{
+    display: none;
+}
+nav ul{
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s;
+}
+nav input:checked ~ ul{
+    height:90px;
+}
+nav li{
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: auto;
+    width: 100px;
+    line-height: 20px;
+}
+main{
+    min-width: 300px;
+}
+
+footer{
+    width: 100vw;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(172, 58, 143);
+}
+footer p{
+    line-height:30px;
+    color: white;
+    text-align: center;
+}
+@media screen and (min-width:600px) {
+    nav ul{
+        display: grid;
+        grid-template: 1fr/repeat(3,1fr);
+    }
+    nav a{
+        line-height: 30px;
+    }
+    nav input:checked ~ ul{
+        height:40px;
+    }
+}
+@media screen and (min-width:800px) {
+    nav ul{
+        position: inherit;
+        height:40px;
+    }
+    nav label{
+        display: none;
+    }
+}
